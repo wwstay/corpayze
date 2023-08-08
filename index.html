@@ -182,7 +182,7 @@
                 <div class="col-lg-6">
                     <div class="h-100 d-flex align-items-center justify-content-center" style="min-height: 300px;">
                         <button type="button" class="btn-play" data-bs-toggle="modal"
-                            data-src="https://wwstay-static.s3.ap-southeast-1.amazonaws.com/Corpayze.mp4"
+                            data-src="https://wwstay-static.s3.ap-southeast-1.amazonaws.com/Wwstay+Corpayzee+2023+(1).mp4"
                             data-bs-target="#videoModal">
                             <span></span>
                         </button>
@@ -202,7 +202,7 @@
                                 <span>With a diverse clientele, we have earned the trust of prominent players in various
                                     industries like Global E-Commerce and Insurance companies with hundreds of
                                     subsidiaries, US Based Retail Consulting Giants, Global Pharma companies and
-                                    BPOs."</span>
+                                    BPOs.</span>
                             </div>
                             <div class="col-sm-6">
                                 <img class="img-fluid mb-4" src="img/icon/icon-2.png" alt="">
@@ -235,7 +235,7 @@
                     <div class="ratio ratio-16x9">
                         <video class="mbr-embedded-video" controls="" autoplay="" name="media" allowfullscreen
                             controlsList="nodownload">
-                            <source src="https://wwstay-static.s3.ap-southeast-1.amazonaws.com/Corpayze.mp4"
+                            <source src="https://wwstay-static.s3.ap-southeast-1.amazonaws.com/Wwstay+Corpayzee+2023+(1).mp4"
                                 type="video/mp4">
                         </video>
                     </div>
@@ -383,7 +383,7 @@
                     </a>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <form name="contactForm" id="contactForm" method="post" target="hiddenFrame"
+                    <form name="contactForm" id="contactForm" method="post" action="https://getform.io/f/b9654f74-ac17-4fcc-a446-513bffce64ee"
                         data-form-title="GET IN TOUCH WITH US">
                         <div class="row g-3">
                             <div class="col-sm-6">
@@ -432,6 +432,7 @@
                                 <div id="error" class="bg-danger centered"></div>
                             </div>
                         </div>
+                        <input type="hidden" name="_gotcha" style="display:none !important">
                     </form>
                 </div>
             </div>
@@ -444,13 +445,15 @@
         <div class="container py-5 text-center">
             <div class="row g-5">
                 <div class="col-lg-4 col-md-4">
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>315, Lowell Avenue, Suite 2B </p>
-                    <p class="mb-2"><i class="me-4"></i>Hamilton, NJ 08619, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+1 877 659 9405</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>315, Lowell Avenue</p>
+                    <p class="mb-2"><i class="me-4"></i>Suite 2B Hamilton</p>
+                    <p class="mb-2"><i class="me-4"></i>NJ 08619, USA</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+1 415 4325732</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>corpayze@wwstay.com</p>
                 </div>
                 <div class="col-lg-4 col-md-4">
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>#29, Empire Infantry, Infantry Road,
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>WWStay Services India Pvt. Ltd.</p>
+                    <p class="mb-2"><i class="fa me-4"></i>#29, Empire Infantry, Infantry Road,
                     </p>
                     <p class="mb-2"><i class="fa me-4"></i>Bangalore - 560001, INDIA
                     </p>
@@ -458,9 +461,10 @@
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>corpayze@wwstay.com</p>
                 </div>
                 <div class="col-lg-4 col-md-4">
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>4th Floor, Kings Suite,
-                        15 College</p>
-                    <p class="mb-2"><i class="fa me-4"></i> Road, Harrow, Middlesex, HA1 1BAU</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>4th Floor, Kings Suite</p>
+                    <p class="mb-2"><i class="fa me-4"></i> 15 College Road, Harrow</p>
+                    <p class="mb-2"><i class="fa me-4"></i> Middlesex, HA1 1BAU</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+1 415 4325732</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>corpayze@wwstay.com</p>
                 </div>
             </div>
@@ -493,34 +497,6 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
-    <script type="text/javascript">
-        $("#contactUsSubmitButton").click(function (event) {
-            console.log('here');
-            event.preventDefault();
-            var help = $('form').serialize();
-            var errorDiv = document.getElementById("error");
-            var successDiv = document.getElementById("success");
-            $.ajax({
-                type: 'POST',
-                url: 'https://apps.wwstay.com/enquiry/new',
-                data: help,
-                success: function (response) {
-                    $('form')[0].reset();
-                    errorDiv.innerHTML = "";
-                    errorDiv.className = "";
-                    successDiv.innerHTML = "Your request submitted successfully.";
-                    successDiv.className = "alert alert-success well-sm centered";
-                },
-                error: function (error) {
-                    console.log(error);
-                    successDiv.innerHTML = "";
-                    successDiv.className = "";
-                    errorDiv.innerHTML = "Request submission failed, please try after sometime.";
-                    errorDiv.className = "alert alert-danger well-sm centered";
-                }
-            });
-        });
-    </script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
